@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Blog{% endblock %}</title>
+
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'skin/css/style.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'skin/css/swiper.min.css' %}">
+    <script src="{% static 'skin/js/jquery-2.2.4.min.js' %}"></script>
+    <script src="{% static 'skin/js/common.js' %}"></script>
+    <script src="{% static 'skin/js/iecheck.js' %}"></script>
+    <script src="{% static 'skin/js/jquery-ias.js' %}"></script>
+    <script src="{% static 'skin/js/swiper.js' %}"></script>
+    <script src="{% static 'skin/js/themeol-sidebar.min.js' %}"></script>
+
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

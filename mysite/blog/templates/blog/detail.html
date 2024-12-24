@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7" />
+    <meta name="renderer" content="webkit" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>{{ page.title }}</title>
+    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="description" content="{{ page.description }}">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'skin/css/style.css' %}" type="text/css" media="all" />
+    <script src="{% static 'skin/js/jquery-2.2.4.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'skin/js/jquery-ias.min.js' %}"></script>
+    <script src="{% static 'skin/js/swiper.min.js' %}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{% static 'skin/css/swiper.min.css'% }" type="text/css" media="all" />
+</head>
+
+<body class="home blog">
+    <div class="placeholder"></div>
+    <header class="header">
+        <div class="navbar">
+            <h1 class="logo"> <a href="{% url 'home' %}" title="某某新闻资讯网">某某新闻资讯网</a> </h1>
+            <div class="nav_box"> <span class="navicon"></span> </div>
+            <div class="nav-search"> <i class="fa fa-search"></i> </div>
+            <ul id="monavber" class="nav" data-type="index" data-infoid="">
+                <li><a href="{% url 'home' %}" title="网站首页">首页</a></li>
+
+                <li>
+                    <a href="{%url 'blog_list'%}">运营推广</a>
+                </li>
+                <li>
+                    <a href="{%url 'blog_list'%}">热点洞察</a>
+                </li>
+                <li>
+                    <a href="{%url 'blog_list'%}">广告运营</a>
+                </li>
+                <li class="current-menu-item">
+                    <a href="">营销推广</a>
+                </li>
+                <li>
+                    <a href="{%url 'blog_list'%}">电商运营</a>
+                </li>
+                <li>
+                    <a href="{%url 'blog_list'%}">创业指南</a>
+                </li>
+                <li>
+                    <a href="detail.html">关于我们</a>
+                    <i class='fa fa-angle-down'></i>
+                    <ul>
+                        <li><a href="detail.html">关于我们</a></li>
+                        <li><a href="detail.html">联系我们</a></li>
+                        <li><a href="detail.html">广告合作</a></li>
+                        <li><a href="detail.html">投稿须知</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="menu pull-right">
+                <form onsubmit="return checkSearchForm()" method="post" name="searchform" action="/search/">
+                    <input class="search-input" name="keyword" id="search-keyword" type="text" required
+                        placeholder=" 输入你要找的内容" />
+                    <button type="submit" class="searchbtn" title="搜一下！"> <i class="fa"></i> </button>
+                    <input type="hidden" name="kwtype" value="0" />
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="content-wrap">
+            <div class="content">
+                <header class="article-header">
+                    <h1>{{ page.title }}</h1>
+                    <div class="meta"> <span class="muted"><i class="fa fa-user-o"></i>某某新闻资讯网</span> <span
+                            class="muted"><i class="fa fa-user-o"></i><a>营销推广</a></span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2024-11-21 02:25:44</span> <span class="muted"><i
+                                class="fa fa-eye"></i>6</span> </div>
+                </header>
+                <div class="pcd_ad ad mb20">
+                    <table width="100%" height="90" style="background-color:#ccc;">
+                        <tbody>
+                            <tr align="center">
+                                <td style="text-align: center;color: #666;line-height: 90px;">后台-定制标签-内容头部广告位</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><br>
+                <div class="mbd_ad ad mb20">
+                    <table width="100%" height="90" style="background-color:#ccc;">
+                        <tbody>
+                            <tr align="center">
+                                <td style="text-align: center;color: #666;line-height: 90px;">后台-定制标签-内容头部广告位</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <article class="article-content" id="yzmcms_viewer">
+                    {% for block in page.body %}
+                    {% if block.block_type == 'heading' %}
+                    <h2>{{ block.value }}</h2>
+                    {% elif block.block_type == 'paragraph' %}
+                    <p>{{ block.value }}</p>
+                    {% elif block.block_type == 'image' %}
+                    <p style="text-align: center;"> <img src="{{ block.value.url }}" alt="{{ block.value.title }}"></p>
+                    {% endif %}
+                    {% endfor %}
+                </article>
+                <div class="pcd_ad ad mb20">
+                    <table width="100%" height="90" style="background-color:#ccc;">
+                        <tbody>
+                            <tr align="center">
+                                <td style="text-align: center;color: #666;line-height: 90px;">后台-定制标签-内容底部广告位</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><br>
+                <div class="mbd_ad ad mb20">
+                    <table width="100%" height="90" style="background-color:#ccc;">
+                        <tbody>
+                            <tr align="center">
+                                <td style="text-align: center;color: #666;line-height: 90px;">后台-定制标签-内容底部广告位</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <nav class="article-nav"> <span class="article-nav-prev">上一篇：<a href="detail.html">资本抢滩区块链：泡沫还是技术？</a>
+                    </span> <span class="article-nav-next">下一篇：没有了！</span> </nav>
+                <div class="related-post">
+                    <h6>相关推荐</h6>
+                    <ul class="related-box clearfix">
+
+                        <li> <a href="detail.html" title="资本抢滩区块链：泡沫还是技术？"><img src="uploads/210901/1-210Z110040JI.jpg"
+                                    alt="资本抢滩区块链：泡沫还是技术？"><span>资本抢滩区块链：泡沫还是技术？</span></a> </li>
+
+                        <li> <a href="detail.html" title="房产中介电商平台“小败局”"><img src="uploads/210901/1-210Z1100341439.jpg"
+                                    alt="房产中介电商平台“小败局”"><span>房产中介电商平台“小败局”</span></a> </li>
+
+                        <li> <a href="detail.html" title="欧莱雅中国CEO：美妆业未来两年变化要大于过去"><img
+                                    src="uploads/allimg/c191121/15J302a392W0-X030.jpg"
+                                    alt="欧莱雅中国CEO：美妆业未来两年变化要大于过去"><span>欧莱雅中国CEO：美妆业未来两年变化要大于过去</span></a> </li>
+
+                        <li> <a href="detail.html" title="智能货柜带来新气象 盈利尚远"><img
+                                    src="uploads/allimg/c191121/15J3029D51N0-623B.jpg"
+                                    alt="智能货柜带来新气象 盈利尚远"><span>智能货柜带来新气象 盈利尚远</span></a> </li>
+
+                        <li> <a href="detail.html" title="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽"><img
+                                    src="uploads/allimg/c191121/15J302a629B0-22021.jpg"
+                                    alt="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽"><span>黄奇帆：忌追捧投资已成长为“恐龙”的独角兽</span></a> </li>
+
+                        <li> <a href="detail.html" title="超5000亿美元市值“灰飞烟灭”谁制造了数字货币"><img
+                                    src="uploads/allimg/c191121/15J302a32N0-5OS.png"
+                                    alt="超5000亿美元市值“灰飞烟灭”谁制造了数字货币"><span>超5000亿美元市值“灰飞烟灭”谁制造了数字货币</span></a> </li>
+
+                        <li> <a href="detail.html" title="中国共享经济杀入奢侈品领域 千禧一代是消费主"><img
+                                    src="uploads/allimg/c191121/15J302a261Z-2DE.jpg"
+                                    alt="中国共享经济杀入奢侈品领域 千禧一代是消费主"><span>中国共享经济杀入奢侈品领域 千禧一代是消费主</span></a> </li>
+
+                        <li> <a href="detail.html" title="5月一二三线城市房价环比都涨了 后续会咋样？"><img
+                                    src="uploads/allimg/c191121/15J3029EcB0-105U1.jpg"
+                                    alt="5月一二三线城市房价环比都涨了 后续会咋样？"><span>5月一二三线城市房价环比都涨了 后续会咋样？</span></a> </li>
+
+                        <li> <a href="detail.html" title="智能汽车研发掀热潮 业界称离解放双手还很远"><img
+                                    src="uploads/allimg/c191121/15J3029D91510-WT1.jpg"
+                                    alt="智能汽车研发掀热潮 业界称离解放双手还很远"><span>智能汽车研发掀热潮 业界称离解放双手还很远</span></a> </li>
+
+                        <li> <a href="detail.html" title="ofo回应涨价：调价后收费可能少于1元 专家:饮鸩"><img
+                                    src="uploads/allimg/c191121/15J302962413F-2I15.jpg"
+                                    alt="ofo回应涨价：调价后收费可能少于1元 专家:饮鸩"><span>ofo回应涨价：调价后收费可能少于1元 专家:饮鸩</span></a> </li>
+
+                    </ul>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3 class="widget_tit">热门标签</h3>
+                    <div class="tag_list">
+                        <ul>
+
+                            <li><a href="{%url 'blog_list'%}">共享单车</a></li>
+
+                            <li><a href="{%url 'blog_list'%}">交易所</a></li>
+
+                            <li><a href="{%url 'blog_list'%}">斗鱼</a></li>
+
+                            <li><a href="{%url 'blog_list'%}">区块链</a></li>
+
+                            <li><a href="{%url 'blog_list'%}">iphone</a></li>
+
+                            <li><a href="{%url 'blog_list'%}">直播</a></li>
+
+                            <li><a href="{%url 'blog_list'%}">苹果</a></li>
+
+                            <li><a href="{%url 'blog_list'%}">短视频</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget widget_text"><br>
+                    <div class="textwidget">
+                        <table width="290" height="250" style="background-color:#ccc;">
+                            <tbody>
+                                <tr align="center">
+                                    <td style="text-align: center;color: #666;line-height: 250px;">后台-定制标签-右侧广告位一</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                </div>
+                <div class="widget d_postlist">
+                    <h3 class="widget_tit">热门排行</h3>
+                    <ul>
+
+                        <li> <a href="detail.html" title="资本抢滩区块链：泡沫还是技术？"> <span class="thumbnail"> <img
+                                        src="uploads/210901/1-210Z110040JI.jpg" alt="资本抢滩区块链：泡沫还是技术？"> </span> <span
+                                    class="text">资本抢滩区块链：泡沫还是技术？</span> <span class="muted">2024-09-01</span> <span
+                                    class="muted"><span class="ds-thread-count" data-replace="1">13次阅读</span></span>
+                            </a> </li>
+
+                        <li> <a href="detail.html" title="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽"> <span class="thumbnail"> <img
+                                        src="uploads/allimg/c191121/15J302a629B0-22021.jpg" alt="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽">
+                                </span> <span class="text">黄奇帆：忌追捧投资已成长为“恐龙”的独角兽</span> <span
+                                    class="muted">2019-11-21</span> <span class="muted"><span class="ds-thread-count"
+                                        data-replace="1">7次阅读</span></span> </a> </li>detail
+                        <li> <a href="detail.html" title="寓见事件，正在成为银行和助贷机构合作的分水"> <span class="thumbnail"> <img
+                                        src="uploads/allimg/c191121/15J2c4GMJ0-53444.jpg" alt="寓见事件，正在成为银行和助贷机构合作的分水">
+                                </span> <span class="text">寓见事件，正在成为银行和助贷机构合作的分水</span> <span
+                                    class="muted">2019-11-21</span> <span class="muted"><span class="ds-thread-count"
+                                        data-replace="1">7次阅读</span></span> </a> </li>
+
+                        <li> <a href="detail.html" title="欧莱雅中国CEO：美妆业未来两年变化要大于过去"> <span class="thumbnail"> <img
+                                        src="uploads/allimg/c191121/15J302a392W0-X030.jpg"
+                                        alt="欧莱雅中国CEO：美妆业未来两年变化要大于过去"> </span> <span
+                                    class="text">欧莱雅中国CEO：美妆业未来两年变化要大于过去</span> <span class="muted">2020-12-10</span>
+                                <span class="muted"><span class="ds-thread-count" data-replace="1">6次阅读</span></span>
+                            </a> </li>
+
+                        <li> <a href="detail.html" title="房产中介电商平台“小败局”"> <span class="thumbnail"> <img
+                                        src="uploads/210901/1-210Z1100341439.jpg" alt="房产中介电商平台“小败局”"> </span> <span
+                                    class="text">房产中介电商平台“小败局”</span> <span class="muted">2024-09-01</span> <span
+                                    class="muted"><span class="ds-thread-count" data-replace="1">5次阅读</span></span> </a>
+                        </li>
+
+                        <li> <a href="detail.html" title="智能货柜带来新气象 盈利尚远"> <span class="thumbnail"> <img
+                                        src="uploads/allimg/c191121/15J3029D51N0-623B.jpg" alt="智能货柜带来新气象 盈利尚远"> </span>
+                                <span class="text">智能货柜带来新气象 盈利尚远</span> <span class="muted">2020-12-10</span> <span
+                                    class="muted"><span class="ds-thread-count" data-replace="1">5次阅读</span></span> </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="widget widget_text"><br>
+                    <div class="textwidget">
+                        <table width="290" height="250" style="background-color:#ccc;">
+                            <tbody>
+                                <tr align="center">
+                                    <td style="text-align: center;color: #666;line-height: 250px;">后台-定制标签-右侧广告位二</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                </div>
+                <div class="widget">
+                    <h3 class="widget_tit">最新文章</h3>
+                    <div class="com_list">
+                        <ul>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="资本抢滩区块链：泡沫还是技术？">资本抢滩区块链：泡沫还是技术？</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="房产中介电商平台“小败局”">房产中介电商平台“小败局”</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="欧莱雅中国CEO：美妆业未来两年变化要大于过去">欧莱雅中国CEO：美妆业未来两年变化···</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html" title="智能货柜带来新气象 盈利尚远">智能货柜带来新气象
+                                        盈利尚远</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽">黄奇帆：忌追捧投资已成长为“恐龙”的···</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="超5000亿美元市值“灰飞烟灭”谁制造了数字货币">超5000亿美元市值“灰飞烟灭”谁制···</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="中国共享经济杀入奢侈品领域 千禧一代是消费主">中国共享经济杀入奢侈品领域 千禧一代···</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="5月一二三线城市房价环比都涨了 后续会咋样？">5月一二三线城市房价环比都涨了 后续···</a> </span> </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget d_textbanner"> <a class="style03"> <strong>友情赞助</strong>
+                        <h2>支持一下站长</h2><br>
+                        <p>请留下赞助人的姓名和联系方式，如需帮助，我会优先解决您的问题！（系统基本参数）<br /><br> </p>
+                    </a> </div>
+                <div class="widget widget_text"><br>
+                    <div class="textwidget">
+                        <table width="290" height="250" style="background-color:#ccc;">
+                            <tbody>
+                                <tr align="center">
+                                    <td style="text-align: center;color: #666;line-height: 250px;">后台-定制标签-右侧广告位三</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                </div>
+                <div class="widget d_textbanner">
+                    <h3>分享网站</h3>
+                    <div class="sidebar_share"> <a rel="nofollow" class="share_weixin"
+                            onclick="themeol_share_wechat(&quot;/&quot;);" title="分享到微信">微信</a> <a rel="nofollow"
+                            href="http://connect.qq.com/widget/shareqq/{% url 'home' %}?url=/g12&amp;title=分享一个不错的网站&amp;&desc=分享一个不错的网站&amp;pics=&amp;site=某某新闻资讯网"
+                            class="share_qq" target="_blank" title="分享到QQ">Q Q</a> <a rel="nofollow"
+                            href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/g12&amp;title=分享一个不错的网站"
+                            class="share_qzone" target="_blank" title="分享到QQ空间">空间</a> <a rel="nofollow"
+                            href="http://service.weibo.com/share/share.php?url=/g12&amp;title=分享一个不错的网站&amp;appkey=&amp;searchPic=true"
+                            class="share_weibo" target="_blank" title="分享到微博">微博</a> </div>
+                </div>
+                <script>
+                    function themeol_share_wechat() {
+                        $("#share_wechat").toggle();
+                    }
+                </script>
+            </aside>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div style="padding:0 20px;overflow:hidden;">
+                <div class="copyright"> Copyright © 2021 新闻资讯个人博客主题模板 版权所有 <a href="https://beian.miit.gov.cn"
+                        target="_blank">ICP备8888666号</a> </div>
+                <div class="trackcode"> 统计代码 </div>
+            </div>
+        </div>
+    </footer>
+    <div id="share_wechat">
+        <div>
+            <span title="关闭" onclick="themeol_share_wechat()" style="">关闭</span> <img src="skin/images/wx.png"
+                width="220">
+            <p style="">用微信“扫一扫”</p>
+        </div>
+    </div>
+    <div id="backtop" class="backtop">
+        <div class="bt-box top" title="返回顶部"> <i class="fa fa-angle-up"></i> </div>
+        <div class="bt-box qq" title="QQ会话"> <a href="tencent://message/?uin=123456&amp;Site=womengda.cn&amp;Menu=yes"
+                rel="nofollow" target="_blank"><i class="fa fa-qq"></i></a> </div>
+        <div class="bt-box bottom" title="网站底部"> <i class="fa fa-angle-down"></i> </div>
+    </div>
+    <!--[if lt IE 9]>
+    <script src="skin/js/iecheck.js"></script>
+    <![endif]-->
+    {% load static %}
+
+    <script src="{%static 'skin/js/themeol-sidebar.min.js'%}" type="text/javascript"></script>
+    <script src="{%static 'skin/js/common.js'%}"></script>
+</body>
+
+</html>

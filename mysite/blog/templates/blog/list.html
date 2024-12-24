@@ -1,0 +1,529 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7" />
+    <meta name="renderer" content="webkit" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>{{ page.title }}</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    {% load static %}
+    <link href="{%static 'skin/css/style.css'%}" rel="stylesheet">
+    <script src="{%static 'skin/js/jquery-2.2.4.min.js'%}" type="text/javascript"></script>
+    <script src="{%static 'skin/js/jquery-ias.min.js'%}"></script>
+    <script src="{%static 'skin/js/swiper.min.js'%}" type="text/javascript"></script>
+    <link rel="stylesheet" href="{%static 'skin/css/swiper.min.css'%}" type="text/css" media="all" />
+</head>
+
+<body class="home blog">
+    <div class="placeholder"></div>
+    <header class="header">
+        <div class="navbar">
+            <h1 class="logo"> <a href="index.html" title="某某新闻资讯网">某某新闻资讯网</a> </h1>
+            <div class="nav_box"> <span class="navicon"></span> </div>
+            <div class="nav-search"> <i class="fa fa-search"></i> </div>
+            <ul id="monavber" class="nav" data-type="index" data-infoid="">
+                <li><a href="index.html" title="网站首页">首页</a></li>
+
+                <li>
+                    <a href="{% url 'blog_list' %}">运营推广</a>
+                </li>
+                <li>
+                    <a href="{% url 'blog_list' %}">热点洞察</a>
+                </li>
+                <li>
+                    <a href="{% url 'blog_list' %}">广告运营</a>
+                </li>
+                <li class="current-menu-item">
+                    <a href="yingxiao.html">营销推广</a>
+                </li>
+                <li>
+                    <a href="{% url 'blog_list' %}">电商运营</a>
+                </li>
+                <li>
+                    <a href="{% url 'blog_list' %}">创业指南</a>
+                </li>
+                <li>
+                    <a href="detail.html">关于我们</a>
+                    <i class='fa fa-angle-down'></i>
+                    <ul>
+                        <li><a href="detail.html">关于我们</a></li>
+                        <li><a href="detail.html">联系我们</a></li>
+                        <li><a href="detail.html">广告合作</a></li>
+                        <li><a href="detail.html">投稿须知</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="menu pull-right">
+                <form onsubmit="return checkSearchForm()" method="post" name="searchform" action="/search/">
+                    <input class="search-input" name="keyword" id="search-keyword" type="text" required
+                        placeholder=" 输入你要找的内容" />
+                    <button type="submit" class="searchbtn" title="搜一下！"> <i class="fa"></i> </button>
+                    <input type="hidden" name="kwtype" value="0" />
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="content-wrap">
+            <div class="content">
+                <header class="archive-header">
+                    <h1>营销推广</h1>
+                </header>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/210901/1-210Z110040JI.jpg" alt="资本抢滩区块链：泡沫还是技术？" title="资本抢滩区块链：泡沫还是技术？" />
+                        </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="资本抢滩区块链：泡沫还是技术？">资本抢滩区块链：泡沫还是技术？</a></h2>
+                    </header>
+                    <p class="note">
+                        随着越来越多的上市公司将区块链作为转型的方向，具有区块链概念的上市公司持续增加。根据同花顺(42.920,&nbsp;-0.95,&nbsp;-2.17%)概念板块统计，截至6月13日，具有区块链概念的上市公司已达80家。
+                        除了上市公司之外，各路资本也蜂拥进入区块链行业···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2024-09-01</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;13</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/210901/1-210Z1100341439.jpg" alt="房产中介电商平台“小败局”" title="房产中介电商平台“小败局”" />
+                        </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="房产中介电商平台“小败局”">房产中介电商平台“小败局”</a></h2>
+                    </header>
+                    <p class="note">
+                        时间倒回2015年，整个房产行业沉浸在&ldquo;转型&rdquo;困惑与对互联网+的憧憬之中，无论是地产大佬还是普通的经纪人，他们为自己所处的房产行业是国民经济支柱而骄傲。
+
+                        变者长存，传统的那套生存模式也让他们倍感焦虑：开发商想做互联网交易平台，新兴的交易平台想···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2024-09-01</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;5</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J302a392W0-X030.jpg" alt="欧莱雅中国CEO：美妆业未来两年变化要大于过去"
+                                title="欧莱雅中国CEO：美妆业未来两年变化要大于过去" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="欧莱雅中国CEO：美妆业未来两年变化要大于过去">欧莱雅中国CEO：美妆业未来两年变化要大于过去</a></h2>
+                    </header>
+                    <p class="note">
+
+
+                        北京时间5月30日消息 欧莱雅中国CEO斯铂涵日前在法国Viva
+                        Technology科技创新大会期间接受了新浪财经等媒体专访。他在回答记者提问时表示，美妆行业过去五年的变化远远大于过去三十年的变化，而今后两年的变化会远远大于过去五年的变化。
+
+                        为什么这样说···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2020-12-10</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;6</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J3029D51N0-623B.jpg" alt="智能货柜带来新气象 盈利尚远"
+                                title="智能货柜带来新气象 盈利尚远" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="智能货柜带来新气象 盈利尚远">智能货柜带来新气象 盈利尚远</a></h2>
+                    </header>
+                    <p class="note">
+                        无人货架企业的士气因近来的多起融资事件而再度被提振。有了新的资金支撑，市场上早期几家无人货架头部企业基本已经进入智能货柜阶段，巨头入场也在支付、新零售赋能等方面带来了新的想象空间。业内专家分析认为，智能货柜可以更广范围地铺入更多场景，不过也面临着供应链、运营、物流等方面的难···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2020-12-10</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;5</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J302a629B0-22021.jpg" alt="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽"
+                                title="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽">黄奇帆：忌追捧投资已成长为“恐龙”的独角兽</a></h2>
+                    </header>
+                    <p class="note">
+                        如何使巨大的研发投入真正转化为高效生产力？黄奇帆从两个角度，解释了他对利用金融来扶持科创成果转化的观点。
+
+                        &ldquo;只要沉心静气抓创新，培育更多自主知识产权，就能赢得发展的主动权。&rdquo;6月15日，在由上海交通大学上海高级金融学院与财新传媒联合主办的首届中国国际金融···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;5</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J302a32N0-5OS.png" alt="超5000亿美元市值“灰飞烟灭”谁制造了数字货币"
+                                title="超5000亿美元市值“灰飞烟灭”谁制造了数字货币" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="超5000亿美元市值“灰飞烟灭”谁制造了数字货币">超5000亿美元市值“灰飞烟灭”谁制造了数字货币</a></h2>
+                    </header>
+                    <p class="note">
+                        资本市场如何让人疯狂，它也会如何让人绝望！对于新兴的加密数字货币市场而言，这同样是一条铁律。
+                        从6月9日起，毫无征兆之下，整个数字货币市场出现连续暴跌，截止到6月13日，主流数字货币代表比特币、以太坊跌幅超过25%，EOS跌幅超过20%。尤其是在6月12日、13日两天，一直坚挺的···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;3</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J302a261Z-2DE.jpg" alt="中国共享经济杀入奢侈品领域 千禧一代是消费主"
+                                title="中国共享经济杀入奢侈品领域 千禧一代是消费主" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="中国共享经济杀入奢侈品领域 千禧一代是消费主">中国共享经济杀入奢侈品领域 千禧一代是消费主</a></h2>
+                    </header>
+                    <p class="note">
+                        中新社长沙6月27日消息，供职于湖南长沙某金融公司的戴辰最近要参加男友的同乡聚会，她正在为没有上档次的包发愁。经朋友推荐，28岁的戴辰在一奢侈品共享平台用一天25元（人民币，下同）的价格租了一款Gucci限量包。
+                        &ldquo;也许有人会说我虚荣，但花便宜的钱租名包总比掏空积蓄买···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;4</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J3029EcB0-105U1.jpg" alt="5月一二三线城市房价环比都涨了 后续会咋样？"
+                                title="5月一二三线城市房价环比都涨了 后续会咋样？" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="5月一二三线城市房价环比都涨了 后续会咋样？">5月一二三线城市房价环比都涨了 后续会咋样？</a></h2>
+                    </header>
+                    <p class="note">
+                        15日，&ldquo;5月份全国各地楼市调控次数创新记录&rdquo;的原因，有了权威答案。
+
+                        &ldquo;防止房价明显过快上涨&rdquo;，15日，国家统计局城市司高级统计师刘建伟解读5月份房价变动情况时表示，5月份，各地不断加大房地产市场调控力度，全国40多个城市出台了调···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;3</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J3029D91510-WT1.jpg" alt="智能汽车研发掀热潮 业界称离解放双手还很远"
+                                title="智能汽车研发掀热潮 业界称离解放双手还很远" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="智能汽车研发掀热潮 业界称离解放双手还很远">智能汽车研发掀热潮 业界称离解放双手还很远</a></h2>
+                    </header>
+                    <p class="note">
+                        2018年俄罗斯世界杯足球赛激战正酣，斥巨资征战世界杯广告市场的公司也吸引了众多注意，其中数家汽车企业借势宣传自动驾驶等性能，包括老牌车企和造车新势力企业。
+
+                        业内人士认为，自动驾驶电动出租车是未来城市出行的主要模式。不过，证券时报记者在&ldquo;GIV2018全球智能汽车前···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;3</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J302962413F-2I15.jpg" alt="ofo回应涨价：调价后收费可能少于1元 专家:饮鸩"
+                                title="ofo回应涨价：调价后收费可能少于1元 专家:饮鸩" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="ofo回应涨价：调价后收费可能少于1元 专家:饮鸩">ofo回应涨价：调价后收费可能少于1元 专家:饮鸩</a></h2>
+                    </header>
+                    <p class="note">
+                        一波未平一波又起。
+                        在因取消免押金政策备受关注的同时，ofo又因调整收费标准被推上风口浪尖。日前，有ofo用户称&ldquo;ofo涨价了？也没个提醒？&rdquo;该用户同时配图显示，其仅使用ofo骑行了0.56公里，用时3分钟，行程费用却为2元钱。
+
+                        有媒体对上述价格作出说明···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;5</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J3029CZ050-46205.jpg" alt="撕开科技外衣 京东金融还是那家" 牌照荒&qu"
+                                title="撕开科技外衣 京东金融还是那家" 牌照荒&qu" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="撕开科技外衣 京东金融还是那家" 牌照荒&qu">撕开科技外衣 京东金融还是那家"牌照荒&qu</a></h2>
+                    </header>
+                    <p class="note">
+                        最近的资本市场可谓几家欢喜几家愁。与几家巨头公司和独角兽集中上市带来的喜庆感同时出现的，是外媒不断传来的估值下调、流血上市的报道。
+
+                        在一级市场和二级市场双双不容乐观的大环境下，BATJ旗下被广泛关注的金融业务，似乎也出现了不同境遇。已经独立分拆的三家公司中，蚂蚁金服和度小满都在···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;3</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J3029A093Z-113M3.jpg" alt="猫眼淘票票豆瓣三平台数据打架 谁在操纵电影评"
+                                title="猫眼淘票票豆瓣三平台数据打架 谁在操纵电影评" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="猫眼淘票票豆瓣三平台数据打架 谁在操纵电影评">猫眼淘票票豆瓣三平台数据打架 谁在操纵电影评</a></h2>
+                    </header>
+                    <p class="note">
+                        今年端午节的电影票房市场依然没有让人失望，三天报收超8亿元票房。据猫眼专业版显示，截至6月18日18时，今年&ldquo;端午节档&rdquo;累计票房已超8亿元，实现稳步增长，而小沈阳首次导演的《猛虫过江》领跑端午节档国产片票房。但值得注意的是，截至记者发稿，《猛虫过江》在猫眼···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;3</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J3029643c20-b058.jpg" alt="网贷频暴雷：业内称平台收益率超10% 投资者就要"
+                                title="网贷频暴雷：业内称平台收益率超10% 投资者就要" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="网贷频暴雷：业内称平台收益率超10% 投资者就要">网贷频暴雷：业内称平台收益率超10% 投资者就要</a></h2>
+                    </header>
+                    <p class="note">
+                        最近一段时间，P2P网贷行业不算&ldquo;太平&rdquo;。
+
+                        6月份以来，随着网贷备案延期大局基本已定，加之行业内的个别平台相继出现了&ldquo;暴雷&rdquo;事件，整个网贷行业出现一些迷茫情绪。一些平台投资人内心产生了困惑，到底是该继续投资、观望，还是应该直接离场···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;3</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J302963Za0-L624.png" alt="媒体评ofo取消免押金：短期内肯定要面临用户流"
+                                title="媒体评ofo取消免押金：短期内肯定要面临用户流" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="媒体评ofo取消免押金：短期内肯定要面临用户流">媒体评ofo取消免押金：短期内肯定要面临用户流</a></h2>
+                    </header>
+                    <p class="note">
+                        &ldquo;盈利必将成为下阶段各家企业竞争的重点，也只有盈利才能从根本上解决平台品牌、产品和服务等核心问题。&rdquo;
+                        一夜之间，共享单车从风口跌落。
+
+                        6月20日，ofo小黄车公司宣布，已上线新一代信用积分体系，通过自有数据建立更加智能和完善的用户信用考评机制。今后ofo···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;3</span> </p>
+                </article>
+
+                <article class="excerpt">
+                    <div class="focus"> <a href="detail.html" class="thumbnail"> <img
+                                src="uploads/allimg/c191121/15J30296302V0-5P93.jpg" alt="网商银行黄浩：2018年最大挑战就在于让网商走向"
+                                title="网商银行黄浩：2018年最大挑战就在于让网商走向" /> </a> </div>
+                    <header>
+                        <h2> <a href="detail.html" title="网商银行黄浩：2018年最大挑战就在于让网商走向">网商银行黄浩：2018年最大挑战就在于让网商走向</a></h2>
+                    </header>
+                    <p class="note">
+                        网商银行行长黄浩
+                        走向市场，跳出阿里生态圈，网商该如何从线上走到线下。
+                        &ldquo;网商银行及其前身蚂蚁小贷，通过与传统金融机构联手，为超过1000万的小微经营者提供贷款服务，并将在未来三年内服务3000万小微商户。&rdquo;6月21日在小微金融峰会上，浙江网商银行行长黄浩···...
+                    </p>
+                    <p> <span class="muted"><i class="fa fa-columns"></i>营销推广</span> <span class="muted"><i
+                                class="fa fa-clock-o"></i>2019-11-21</span> <span class="muted"><i
+                                class="fa fa-eye"></i>&nbsp;3</span> </p>
+                </article>
+
+                <div class="pagenavi clearfix">
+                    <div class="pages">
+                        <span class='page-status'>共31条 当前1/3页</span><span class='page-index'><a
+                                href='yingxiao.html'>首页</a></span><span class='page-pre'><a
+                                href='javascript:;'>前一页</a></span><span class='page-numbar'><a href="yingxiao.html"
+                                class="page-num page-num-current">1</a><a href="a/yingxiao_2/" class="page-num">2</a><a
+                                href="a/yingxiao_3/" class="page-num">3</a></span><span class='page-next'><a
+                                href='a/yingxiao_2/'>后一页</a></span><span class='page-last'><a
+                                href='a/yingxiao_3/'>尾页</a></span>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3 class="widget_tit">热门标签</h3>
+                    <div class="tag_list">
+                        <ul>
+
+                            <li><a href="{% url 'blog_list' %}">共享单车</a></li>
+
+                            <li><a href="{% url 'blog_list' %}">交易所</a></li>
+
+                            <li><a href="{% url 'blog_list' %}">斗鱼</a></li>
+
+                            <li><a href="{% url 'blog_list' %}">区块链</a></li>
+
+                            <li><a href="{% url 'blog_list' %}">iphone</a></li>
+
+                            <li><a href="{% url 'blog_list' %}">直播</a></li>
+
+                            <li><a href="{% url 'blog_list' %}">苹果</a></li>
+
+                            <li><a href="{% url 'blog_list' %}">短视频</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget widget_text"><br>
+                    <div class="textwidget">
+                        <table width="290" height="250" style="background-color:#ccc;">
+                            <tbody>
+                                <tr align="center">
+                                    <td style="text-align: center;color: #666;line-height: 250px;">后台-定制标签-右侧广告位一</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                </div>
+                <div class="widget d_postlist">
+                    <h3 class="widget_tit">热门排行</h3>
+                    <ul>
+
+                        <li> <a href="detail.html" title="资本抢滩区块链：泡沫还是技术？"> <span class="thumbnail"> <img
+                                        src="uploads/210901/1-210Z110040JI.jpg" alt="资本抢滩区块链：泡沫还是技术？"> </span> <span
+                                    class="text">资本抢滩区块链：泡沫还是技术？</span> <span class="muted">2024-09-01</span> <span
+                                    class="muted"><span class="ds-thread-count" data-replace="1">13次阅读</span></span>
+                            </a> </li>
+
+                        <li> <a href="detail.html" title="寓见事件，正在成为银行和助贷机构合作的分水"> <span class="thumbnail"> <img
+                                        src="uploads/allimg/c191121/15J2c4GMJ0-53444.jpg" alt="寓见事件，正在成为银行和助贷机构合作的分水">
+                                </span> <span class="text">寓见事件，正在成为银行和助贷机构合作的分水</span> <span
+                                    class="muted">2019-11-21</span> <span class="muted"><span class="ds-thread-count"
+                                        data-replace="1">7次阅读</span></span> </a> </li>
+
+                        <li> <a href="detail.html" title="欧莱雅中国CEO：美妆业未来两年变化要大于过去"> <span class="thumbnail"> <img
+                                        src="uploads/allimg/c191121/15J302a392W0-X030.jpg"
+                                        alt="欧莱雅中国CEO：美妆业未来两年变化要大于过去"> </span> <span
+                                    class="text">欧莱雅中国CEO：美妆业未来两年变化要大于过去</span> <span class="muted">2020-12-10</span>
+                                <span class="muted"><span class="ds-thread-count" data-replace="1">6次阅读</span></span>
+                            </a> </li>
+
+                        <li> <a href="detail.html" title="房产中介电商平台“小败局”"> <span class="thumbnail"> <img
+                                        src="uploads/210901/1-210Z1100341439.jpg" alt="房产中介电商平台“小败局”"> </span> <span
+                                    class="text">房产中介电商平台“小败局”</span> <span class="muted">2024-09-01</span> <span
+                                    class="muted"><span class="ds-thread-count" data-replace="1">5次阅读</span></span> </a>
+                        </li>
+
+                        <li> <a href="detail.html" title="智能货柜带来新气象 盈利尚远"> <span class="thumbnail"> <img
+                                        src="uploads/allimg/c191121/15J3029D51N0-623B.jpg" alt="智能货柜带来新气象 盈利尚远"> </span>
+                                <span class="text">智能货柜带来新气象 盈利尚远</span> <span class="muted">2020-12-10</span> <span
+                                    class="muted"><span class="ds-thread-count" data-replace="1">5次阅读</span></span> </a>
+                        </li>
+
+                        <li> <a href="detail.html" title="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽"> <span class="thumbnail"> <img
+                                        src="uploads/allimg/c191121/15J302a629B0-22021.jpg" alt="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽">
+                                </span> <span class="text">黄奇帆：忌追捧投资已成长为“恐龙”的独角兽</span> <span
+                                    class="muted">2019-11-21</span> <span class="muted"><span class="ds-thread-count"
+                                        data-replace="1">5次阅读</span></span> </a> </li>
+
+                    </ul>
+                </div>
+                <div class="widget widget_text"><br>
+                    <div class="textwidget">
+                        <table width="290" height="250" style="background-color:#ccc;">
+                            <tbody>
+                                <tr align="center">
+                                    <td style="text-align: center;color: #666;line-height: 250px;">后台-定制标签-右侧广告位二</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                </div>
+                <div class="widget">
+                    <h3 class="widget_tit">最新文章</h3>
+                    <div class="com_list">
+                        <ul>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="资本抢滩区块链：泡沫还是技术？">资本抢滩区块链：泡沫还是技术？</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="房产中介电商平台“小败局”">房产中介电商平台“小败局”</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="欧莱雅中国CEO：美妆业未来两年变化要大于过去">欧莱雅中国CEO：美妆业未来两年变化···</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html" title="智能货柜带来新气象 盈利尚远">智能货柜带来新气象
+                                        盈利尚远</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="黄奇帆：忌追捧投资已成长为“恐龙”的独角兽">黄奇帆：忌追捧投资已成长为“恐龙”的···</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="超5000亿美元市值“灰飞烟灭”谁制造了数字货币">超5000亿美元市值“灰飞烟灭”谁制···</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="中国共享经济杀入奢侈品领域 千禧一代是消费主">中国共享经济杀入奢侈品领域 千禧一代···</a> </span> </li>
+
+                            <li><span class="comment_article"> <a href="detail.html"
+                                        title="5月一二三线城市房价环比都涨了 后续会咋样？">5月一二三线城市房价环比都涨了 后续···</a> </span> </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget d_textbanner"> <a class="style03"> <strong>友情赞助</strong>
+                        <h2>支持一下站长</h2><br>
+                        <p>请留下赞助人的姓名和联系方式，如需帮助，我会优先解决您的问题！（系统基本参数）<br /><br> </p>
+                    </a> </div>
+                <div class="widget widget_text"><br>
+                    <div class="textwidget">
+                        <table width="290" height="250" style="background-color:#ccc;">
+                            <tbody>
+                                <tr align="center">
+                                    <td style="text-align: center;color: #666;line-height: 250px;">后台-定制标签-右侧广告位三</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><br>
+                </div>
+                <div class="widget d_textbanner">
+                    <h3>分享网站</h3>
+                    <div class="sidebar_share"> <a rel="nofollow" class="share_weixin"
+                            onclick="themeol_share_wechat(&quot;/&quot;);" title="分享到微信">微信</a> <a rel="nofollow"
+                            href="http://connect.qq.com/widget/shareqq/index.html?url=/g12&title=分享一个不错的网站&&desc=分享一个不错的网站&pics=&site=某某新闻资讯�?"
+                            class="share_qq" target="_blank" title="分享到QQ">Q Q</a> <a rel="nofollow"
+                            href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=/g12&title=分享一个不错的网站"
+                            class="share_qzone" target="_blank" title="分享到QQ空间">空间</a> <a rel="nofollow"
+                            href="http://service.weibo.com/share/share.php?url=/g12&title=分享一个不错的网站&appkey=&searchPic=true"
+                            class="share_weibo" target="_blank" title="分享到微博">微博</a> </div>
+                </div>
+                <script>
+                    function themeol_share_wechat() {
+                        $("#share_wechat").toggle();
+                    }
+                </script>
+            </aside>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div style="padding:0 20px;overflow:hidden;">
+                <div class="copyright"> Copyright © 2021 新闻资讯个人博客主题模板 版权所有 <a href="https://beian.miit.gov.cn/"
+                        target="_blank">ICP备8888666号</a> </div>
+                <div class="trackcode"> 统计代码 </div>
+            </div>
+        </div>
+    </footer>
+    <div id="share_wechat">
+        <div>
+            <span title="关闭" onclick="themeol_share_wechat()" style="">关闭</span> <img src="skin/images/wx.png"
+                width="220">
+            <p style="">用微信“扫一扫”</p>
+        </div>
+    </div>
+    <div id="backtop" class="backtop">
+        <div class="bt-box top" title="返回顶部"> <i class="fa fa-angle-up"></i> </div>
+        <div class="bt-box qq" title="QQ会话"> <a href="tencent://message/?uin=123456&Site=womengda.cn&Menu=yes"
+                rel="nofollow" target="_blank"><i class="fa fa-qq"></i></a> </div>
+        <div class="bt-box bottom" title="网站底部"> <i class="fa fa-angle-down"></i> </div>
+    </div>
+    <!--[if lt IE 9]>
+    <script src="skin/js/iecheck.js"></script>
+    <![endif]-->
+    <script src="{%static 'skin/js/themeol-sidebar.min.js'%}" type="text/javascript"></script>
+    <script src="{%static 'skin/js/common.js'%}"></script>
+</body>
+
+</html>

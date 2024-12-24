@@ -1,0 +1,7 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <h2>{{ page.title }}</h2>
+    <p>{{ page.intro|richtext }}</p>
+    <div>{{ page.body|richtext }}</div>
+{% endblock %}
